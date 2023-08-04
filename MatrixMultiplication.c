@@ -226,22 +226,22 @@ int main(int argc, char *argv[]) {
     srand(time(NULL));
     Matrix matrixOne = createRandMatrix(sizeMatrix);
     Matrix matrixTwo = createRandMatrix(sizeMatrix);
-    // printf("Matrix 1:\n");
-    // printMatrix(matrixOne);
-    // printf("Matrix 2:\n");
-    // printMatrix(matrixTwo);
+    printf("Matrix 1:\n");
+    printMatrix(matrixOne);
+    printf("Matrix 2:\n");
+    printMatrix(matrixTwo);
     // Cache efficiant
     if(choice == 1) { 
         Matrix multipliedCF = matrixMultiplyCacheFriendly(matrixOne, matrixTwo);
         printf("Matrix Multiplied by Cache Friendly Method:\n");
-        // printMatrix(multipliedCF);
+        printMatrix(multipliedCF);
         freeMatrix(&multipliedCF);
     }
     // Naive Method
     else { 
         Matrix multipliedNaive = matrixMultiplyNaive(matrixOne, matrixTwo);
         printf("Matrix Multipled by Naive Method:\n");
-        // printMatrix(multipliedNaive);
+        printMatrix(multipliedNaive);
         freeMatrix(&multipliedNaive);
     }
     freeMatrix(&matrixOne);
